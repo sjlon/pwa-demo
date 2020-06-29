@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PWA</title>
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<h2>pwa</h2>
+	</body>
+	<script>
+		// 注册一个service worker
+		navigator.serviceWorker
+			.register('./sw.js')
+			.then(registration => {
+				console.log(registration)
+			})
+			.catch(err => console.log(err))
+	</script>
+</html>
